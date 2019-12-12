@@ -12,6 +12,9 @@ The project is built in a way that a file called "private.php" must contain seve
 
 The whole project was developed using PHP and Javascript.
 
+The library used to interact with the Twitter API was the following:
+- https://github.com/J7mbo/twitter-api-php
+
 There are several buttons in the UI that present different graphs:
 - Word cloud
 - Number of tweets per day
