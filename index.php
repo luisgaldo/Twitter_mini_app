@@ -34,12 +34,8 @@ tr:nth-child(even) {
     <canvas id="chart_tweets_length_distribution"></canvas>
     <div id='tweets_table'></div>
 </body>
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-?>
 <script>
+//AJAX functions that detect the click on a button and call the corresponding PHP file to perform an action.
     $(document).ready(function(){
         $('input[id="gather_tweets"]').click(function(){
            $.ajax({
@@ -179,6 +175,8 @@ error_reporting(E_ALL);
         });
     });
 
+
+//Functions to show the different graphs
     function grafica_length_distribution(dates,contadores){    
         var ctx = document.getElementById('chart_number_tweets').getContext('2d');
         var myChart = new Chart(ctx, {
@@ -226,8 +224,6 @@ error_reporting(E_ALL);
     }
     
     function grafica_cloud_words(nube){    
-        // List of words
-        
         var myWords = nube;
 
         // set the dimensions and margins of the graph

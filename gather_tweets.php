@@ -20,11 +20,10 @@ $response = json_decode($twitter->setGetfield($getfield)
     ->buildOauth($url, $requestMethod)
     ->performRequest(), true);
     
-
-//var_dump($response);
   
 $conexion = conexion_bbdd();   
 foreach($response['statuses'] as $tweets) {
+    //Modifications needed to convert the time returned by Twitter API to datetime.
     $created_at = date("Y-m-d H:i:s", strtotime($tweets['created_at']));
     $screen_name = $tweets[user][screen_name];
     $user_id = $tweets[user][id];
