@@ -24,3 +24,8 @@ In order to set up a local PHP server, the following command can be used after i
 - php -S localhost:8000
 
 For the database, I used XAMPP (https://www.apachefriends.org/es/index.html) which allows to set up, in an easy way, a MySQL database.
+
+
+Notes:
+
+Once the button "Obtener tweets" is clicked, it takes several seconds until the pop up screen appears confirming (or denyning) if the request went ok.
